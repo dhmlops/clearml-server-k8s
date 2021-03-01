@@ -12,7 +12,7 @@ spec:
     app.kubernetes.io/name: fileserver
     app.kubernetes.io/instance: clearml-server
     app.kubernetes.io/part-of: clearml-server
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 8081

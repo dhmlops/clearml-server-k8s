@@ -12,7 +12,7 @@ spec:
     app.kubernetes.io/name: webserver
     app.kubernetes.io/instance: clearml-server
     app.kubernetes.io/part-of: clearml-server
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 80
@@ -60,10 +60,10 @@ spec:
         resources:
           requests:
             memory: "25M"
-            cpu: "100m"
+            cpu: "50m"
           limits:
             memory: "50M"
-            cpu: "200m"
+            cpu: "80m"
         args:
         - webserver
         env:
